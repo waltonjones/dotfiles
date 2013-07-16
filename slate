@@ -1,0 +1,64 @@
+# Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+config keyboardLayout qwerty
+config windowHintsShowIcons true
+config windowHintsFontColor 0;0;0;1.0
+config windowHintsIgnoreHiddenWindows false
+config windowHintsDuration 3
+config windowHintsSpread true
+#config windowHintsOrder persist
+
+# Misc Aliases
+alias showNormalHint hint 1234567890
+
+# Abstract position aliases
+alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
+alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+alias tophalf		push top bar-resize:screenSizeY/2
+alias bottomhalf	push bottom bar-resize:screenSizeY/2
+alias topleft		corner	top-left		resize:screenSizeX/2;screenSizeY/2
+alias topright		corner	top-right		resize:screenSizeX/2;screenSizeY/2
+alias bottomleft 	corner	bottom-left		resize:screenSizeX/2;screenSizeY/2
+alias bottomright 	corner	bottom-right	resize:screenSizeX/2;screenSizeY/2
+
+# Resize Bindings
+# NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
+bind right:ctrl resize +10% +0
+bind left:ctrl  resize -10% +0
+bind up:ctrl    resize +0   -10%
+bind down:ctrl  resize +0   +10%
+bind right:ctrl;shift  resize -10% +0 bottom-right
+bind left:ctrl;shift   resize +10% +0 bottom-right
+bind up:ctrl;shift     resize +0   +10% bottom-right
+bind down:ctrl;shift   resize +0   -10% bottom-right
+
+# ======================================
+# Using my new HYPER key
+# ======================================
+
+alias hyper ctrl;shift;alt;cmd
+
+# Location bindings
+bind h:${hyper} ${lefthalf}
+bind j:${hyper} ${tophalf}
+bind l:${hyper} ${righthalf}
+bind k:${hyper} ${bottomhalf}
+bind ;:${hyper} ${full}
+
+# Grid control binding
+bind g:${hyper} grid padding:5 0:8,3
+
+# Focus Bindings
+# bind right:${hyper}    focus right
+# bind left:${hyper}     focus left
+# bind up:${hyper}       focus up
+# bind down:${hyper}     focus down
+
+# App bindings
+bind tab:${hyper}  ${showNormalHint}
