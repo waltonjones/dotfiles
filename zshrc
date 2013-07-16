@@ -41,12 +41,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$HOME/.virtualenvs/ip/bin/python:/usr/local/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$PATH
-#export EDITOR="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
-#alias sublime="$EDITOR";
-# alias nano="sublime";
-alias mutt 'cd ~/Desktop && mutt';
 alias v='f -e vim'; # quick opening files with vim
-alias e='f -e subl'; # quick opening files with Sublime
 alias ..='cd ..'; 
 alias ...='cd ../../'; 
 alias ....='cd ../../../'; 
