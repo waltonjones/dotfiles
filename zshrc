@@ -40,7 +40,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$HOME/.virtualenvs/ip/bin/python:/usr/local/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$PATH
+export PATH=$HOME/.virtualenvs/ip/bin/python:/usr/local/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$HOME/node_modules/less/bin:$PATH
+
 alias v='f -e vim'; # quick opening files with vim
 alias ..='cd ..'; 
 alias ...='cd ../../'; 

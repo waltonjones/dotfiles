@@ -44,6 +44,7 @@ bind g:${hyper} grid padding:5 0:8,3
 bind right:${hyper}    focus right
 bind left:${hyper}     focus left
 bind up:${hyper}       focus behind
+bind down:${hyper}     focus behind
 
 # App bindings
 bind tab:${hyper}  hint
