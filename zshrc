@@ -43,10 +43,11 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/.virtualenvs/ip/bin/python:/usr/local/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$HOME/node_modules/less/bin:$PATH
 
 alias v='f -e vim'; # quick opening files with vim
+export EDITOR='subl -w'
 alias ..='cd ..'; 
 alias ...='cd ../../'; 
 alias ....='cd ../../../'; 
 alias .....='cd ../../../../';
 autoload -U compinit && compinit;
 eval "$(fasd --init posix-alias zsh-hook)"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
