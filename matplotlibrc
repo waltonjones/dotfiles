@@ -225,13 +225,13 @@ text.color          : black
 # default fontsizes for ticklabels, and so on.  See
 # http://matplotlib.org/api/axes_api.html#module-matplotlib.axes
 #axes.hold           : True    # whether to clear the axes by default on
-axes.facecolor      : eeeeee   # axes background color
+axes.facecolor      : ffffff   # axes background color
 axes.edgecolor      : bcbcbc   # axes edge color
 axes.linewidth      : 1.0     # edge linewidth
 axes.grid           : False   # display grid or not
 axes.titlesize      : x-large   # fontsize of the axes title
 axes.labelsize      : large  # fontsize of the x any y labels
-#axes.labelweight    : normal  # weight of the x and y labels
+axes.labelweight    : normal  # weight of the x and y labels
 axes.labelcolor     : 555555
 axes.axisbelow      : True   # whether axis gridlines and ticks are below
                               # the axes elements (lines, text, etc)
@@ -372,11 +372,11 @@ path.simplify : True   # When True, simplify paths by removing "invisible"
 savefig.dpi         : 150      # figure dots per inch
 #savefig.facecolor   : white    # figure facecolor when saving
 #savefig.edgecolor   : white    # figure edgecolor when saving
-savefig.format      : pdf      # png, ps, pdf, svg
+savefig.format      : png      # png, ps, pdf, svg
 #savefig.bbox        : standard # 'tight' or 'standard'.
 #savefig.pad_inches  : 0.1      # Padding to be used when bbox is set to 'tight'
 #savefig.jpeg_quality: 95       # when a jpeg is saved, the default quality parameter.
-savefig.directory   : ~/Desktop        # default directory in savefig dialog box,
+savefig.directory   : /Users/walton/Desktop/        # default directory in savefig dialog box,
                                 # leave empty to always use current working directory
 
 # tk backend params

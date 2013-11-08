@@ -21,7 +21,10 @@ export LANG=en_US.UTF-8
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
+
+# Uncomment to disable the confirmation prompt for auto-updates
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
