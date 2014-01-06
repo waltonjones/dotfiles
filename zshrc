@@ -41,12 +41,14 @@ DISABLE_UPDATE_PROMPT="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Customize to your needs...
-export PATH=$HOME/.virtualenvs/ip/bin/python:/usr/local/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$HOME/node_modules/less/bin:$PATH
+export PATH=/usr/local/bin:$HOME/anaconda/bin:$HOME/envs/py2/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$HOME/node_modules/less/bin:$PATH
 
 alias v='f -e vim'; # quick opening files with vim
 export EDITOR='subl -w'
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias ..='cd ..'; 
 alias ...='cd ../../'; 
 alias ....='cd ../../../'; 
