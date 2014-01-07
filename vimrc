@@ -109,6 +109,7 @@ function! ToggleWPMode()
         set wrap linebreak nolist noexpandtab
         set formatprg=par
         set spell spelllang=en_us
+        set thesaurus+=~/.vim/thesaurus/mthesaur.txt 
         let g:wp_mode_is_on = 1
     endif
 endfunction
