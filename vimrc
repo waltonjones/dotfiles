@@ -1,7 +1,17 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+" Turn off Vi compatibility
+set nocompatible
+
+" Use filetype auto-detection
+filetype off
+
+" Security issue
+set modelines=0
 
 
+
+
+" Bundle management
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -11,35 +21,123 @@ Bundle 'https://github.com/junegunn/goyo.vim.git'
 Bundle 'https://github.com/amix/vim-zenroom2.git'
 Bundle 'https://github.com/tpope/vim-markdown.git'
 Bundle 'beloglazov/vim-online-thesaurus'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
 
-" show line numbers
-set number
 
-" last window always has a statusline
+
+" Miscellaneous
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Disable welcome message
+set shortmess+=I
+
+" Set default encoding
+set encoding=utf-8
+
+" Adjusting the menu shown for command auto-completion
+set wildmenu
+set wildmode=list:longest,full
+
+" Create undofiles so undo works across sessions
+set undofile
+
+" Show relative line numbers
+set relativenumber
+
+" No bell sounds
+set visualbell
+
+" Fast scrolling
+set ttyfast
+
+" Show the line where the cursor is located
+set cursorline
+
+" Hide buffers on switching instead of abandoning them
+set hidden
+
+" Autoload hidden buffers on change
+set autoread
+
+" Make backspace work
+set backspace=indent,eol,start
+
+" Map leader key (default was "\")
+let mapleader = ","
+
+" Stop opening help on accident when going for escape
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+" Status line
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Always show the status line
 set laststatus=2
 
-" activates indenting for files
-filetype indent on
-
-" Don't continue to highlight searched phrases.
-set nohlsearch
-
-" But do highlight as you type your search.
-set incsearch
-
-" Make searches case-insensitive.
-set ignorecase
-
-" Always show info along bottom (including cursor position).
+" Always show info along bottom (including cursor position)
 set ruler
 
-" auto-indent
+" Show current mode
+set showmode
+
+" Show info on the current command in the status bar
+set showcmd
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+" Search
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ignore case when searching
+set ignorecase
+
+" Use Python/Perl-style regex when searching
+nnoremap / /\v
+vnoremap / /\v
+
+" Unless the search term has capital letters
+set smartcase
+
+" Global search and replace by default; use s/a/b/g to override
+set gdefault
+
+" Start searching as soon as text is typed
+set incsearch
+
+" Jump back to matching bracket briefly when closing one is inserted. 
+set showmatch
+
+" Auto-scrolls so at least 3 lines are visible around each search result
+set scrolloff=3
+
+" Highlight search results
+set hlsearch
+
+" Can be annoying, so leader+space will clear it.
+nnoremap <leader><space> :noh<cr>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+" Tabs/Indenting
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Auto-indent (copies previous line's indentation when starting a new line)
 set autoindent
+
+" Activates indenting for files
+filetype indent on
 
 " tab spacing
 set tabstop=4
@@ -47,42 +145,75 @@ set tabstop=4
 " unify
 set softtabstop=4
 
-" indent/outdent by 4 columns
+" Indent/outdent by 4 columns
 set shiftwidth=4
 
-" always indent/outdent to the nearest tabstop
+" Always indent/outdent to the nearest tabstop
 set shiftround
 
-" use spaces instead of tabs
+" Tab inserts spaces instead of tabs
 set expandtab
 
 " use tabs at the start of a line, spaces elsewhere
 set smarttab
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Mouse
-set mouse=a                " Mouse for scrolling
-set mousehide              " Hides the mouse when typing
 
 
+
+
+
+" Disable arrow keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Yank text to the OS X clipboard
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+" Mouse settings (allows for scrolling with the mouse or trackpad)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mouse for scrolling
+set mouse=a
+
+" Hides the mouse when typing
+set mousehide
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+" OS X Clipboard settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Yank text to the OS X clipboard (for use in Terminal Vim)
 noremap <Leader>y "*y
 noremap <Leader>yy "*Y
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
+" Use the OS clipboard in MacVim by default (on versions compiled with `+clipboard`)
+set clipboard=unnamed
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+
+
+
+" Settings for writing prose/markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Open markdown in marked
 imap <leader>m <ESC>:!open -a Marked.app "%"<CR><CR>
 nmap <leader>m :!open -a Marked.app "%"<CR><CR>
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " WordProcessor Mode / Goyo
 let g:goyo_width=70
 
@@ -90,23 +221,30 @@ let g:wp_mode_is_on = 0
 
 function! ToggleWPMode()
     if g:wp_mode_is_on
-        set formatoptions=tcq
-        set nowrap nolinebreak expandtab
+        set expandtab
         silent! nunmap <buffer> k
         silent! nunmap <buffer> j
         silent! nunmap <buffer> 0
         silent! nunmap <buffer> $
+        silent! vunmap <buffer> k
+        silent! vunmap <buffer> j
+        silent! vunmap <buffer> 0
+        silent! vunmap <buffer> $
         silent! iunmap <buffer> k
         silent! iunmap <buffer> j
         silent! iunmap <buffer> 0
         silent! iunmap <buffer> $
         let g:wp_mode_is_on = 0
     else
-        set formatoptions=ant1
+        set formatoptions=1
         noremap k gk
         noremap j gj
         noremap 0 g0
         noremap $ g$
+        vnoremap j gj
+        vnoremap k gk
+        vnoremap 0 g0
+        vnoremap $ g$
         set wrap linebreak nolist noexpandtab
         set formatprg=par
         set spell spelllang=en_us
@@ -115,8 +253,39 @@ function! ToggleWPMode()
 endfunction
 
 nnoremap <Leader>g :Goyo<CR>:call ToggleWPMode()<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Crazy combos to make things easier
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Open vimrc up in a split window for on-the-fly changes
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+" Double j's in insert mode returns to normal mode
+inoremap jj <ESC>
+
+" Re-hardwrap paragraphs with leader-q
+nnoremap <leader>q gqip
+
+" Open a split window and go there
+nnoremap <leader>w <C-w>v<C-w>l
+
+" Moving around split windows (^hjkl)
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Toggle comments with Nerdcommenter from normal mode
+map <leader>/ <plug>NERDCommenterToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" Color settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Solarized Color Scheme
 set t_Co=256               " enable 256-color mode.
@@ -124,3 +293,4 @@ set background=light
 syntax enable
 call togglebg#map("<F5>")  " toggle color between light and dark
 colorscheme solarized      " set colorscheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
