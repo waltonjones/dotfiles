@@ -10,6 +10,7 @@ Bundle 'https://github.com/altercation/vim-colors-solarized.git'
 Bundle 'https://github.com/junegunn/goyo.vim.git'
 Bundle 'https://github.com/amix/vim-zenroom2.git'
 Bundle 'https://github.com/tpope/vim-markdown.git'
+Bundle 'beloglazov/vim-online-thesaurus'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -109,7 +110,6 @@ function! ToggleWPMode()
         set wrap linebreak nolist noexpandtab
         set formatprg=par
         set spell spelllang=en_us
-        set thesaurus+=~/.vim/thesaurus/mthesaur.txt 
         let g:wp_mode_is_on = 1
     endif
 endfunction
