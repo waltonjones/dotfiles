@@ -288,7 +288,7 @@ map <leader>/ <plug>NERDCommenterToggle<CR>
 
 
 
-" Color settings
+" Appearance
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Solarized Color Scheme
 colorscheme solarized
@@ -304,4 +304,7 @@ syntax enable
 
 " Use F5 to toggle between light and dark solarized versions
 call togglebg#map("<F5>")
+
+" Set the GUI font for MacVim
+:set guifont=Inconsolata-dz:h15
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
