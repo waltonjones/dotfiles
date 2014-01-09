@@ -18,7 +18,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'https://github.com/altercation/vim-colors-solarized.git'
 Bundle 'https://github.com/junegunn/goyo.vim.git'
-Bundle 'https://github.com/amix/vim-zenroom2.git'
 Bundle 'https://github.com/tpope/vim-markdown.git'
 Bundle 'beloglazov/vim-online-thesaurus'
 Bundle 'scrooloose/nerdtree'
@@ -47,6 +46,13 @@ set undofile
 " Show relative line numbers
 set relativenumber
 
+" Wrap long lines
+set wrap
+
+" Do not show invisible characters
+set list
+set listchars=tab:▸\ ,eol:¬
+
 " No bell sounds
 set visualbell
 
@@ -67,6 +73,9 @@ set backspace=indent,eol,start
 
 " Map leader key (default was "\")
 let mapleader = ","
+
+" Save document when window loses focus
+au FocusLost * :wa
 
 " Stop opening help on accident when going for escape
 inoremap <F1> <ESC>
@@ -162,7 +171,8 @@ set smarttab
 
 
 
-" Disable arrow keys
+" Disable arrow keys and allow proper maneuvering over visual lines rather
+" than actual lines
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -172,6 +182,14 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+noremap k gk
+noremap j gj
+noremap 0 g0
+noremap $ g$
+vnoremap j gj
+vnoremap k gk
+vnoremap 0 g0
+vnoremap $ g$
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -221,33 +239,16 @@ let g:wp_mode_is_on = 0
 
 function! ToggleWPMode()
     if g:wp_mode_is_on
-        set expandtab
-        silent! nunmap <buffer> k
-        silent! nunmap <buffer> j
-        silent! nunmap <buffer> 0
-        silent! nunmap <buffer> $
-        silent! vunmap <buffer> k
-        silent! vunmap <buffer> j
-        silent! vunmap <buffer> 0
-        silent! vunmap <buffer> $
-        silent! iunmap <buffer> k
-        silent! iunmap <buffer> j
-        silent! iunmap <buffer> 0
-        silent! iunmap <buffer> $
+        set nolinebreak
+        set list
+        set nospell
+        set formatprg=""
         let g:wp_mode_is_on = 0
     else
-        set formatoptions=1
-        noremap k gk
-        noremap j gj
-        noremap 0 g0
-        noremap $ g$
-        vnoremap j gj
-        vnoremap k gk
-        vnoremap 0 g0
-        vnoremap $ g$
-        set wrap linebreak nolist noexpandtab
-        set formatprg=par
+        set formatoptions=n1
+        set linebreak nolist
         set spell spelllang=en_us
+        set formatprg=par
         let g:wp_mode_is_on = 1
     endif
 endfunction
@@ -258,7 +259,7 @@ nnoremap <Leader>g :Goyo<CR>:call ToggleWPMode()<CR>
 
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Crazy combos to make things easier
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Open vimrc up in a split window for on-the-fly changes
@@ -281,16 +282,26 @@ nnoremap <C-l> <C-w>l
 
 " Toggle comments with Nerdcommenter from normal mode
 map <leader>/ <plug>NERDCommenterToggle<CR>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
 
 
 " Color settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Solarized Color Scheme
-set t_Co=256               " enable 256-color mode.
+" Set Solarized Color Scheme
+colorscheme solarized
+
+" enable 256-color mode
+set t_Co=256
+
+"Default to the light version of Solarized
 set background=light
+
+"Turn on syntax highlighting
 syntax enable
-call togglebg#map("<F5>")  " toggle color between light and dark
-colorscheme solarized      " set colorscheme
+
+" Use F5 to toggle between light and dark solarized versions
+call togglebg#map("<F5>")
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
