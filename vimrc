@@ -22,7 +22,7 @@ Bundle 'https://github.com/tpope/vim-markdown.git'
 Bundle 'beloglazov/vim-online-thesaurus'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-
+Bundle 'davidbeckingsale/writegood.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -244,15 +244,17 @@ function! ToggleWPMode()
         set nospell
         set formatprg=""
         let g:wp_mode_is_on = 0
+        silent !WritegoodDisable
     else
         set formatoptions=n1
         set linebreak nolist
         set spell spelllang=en_us
         set formatprg=par
         let g:wp_mode_is_on = 1
+        WritegoodEnable
     endif
 endfunction
-
+nnoremap <Leader>wp :call ToggleWPMode()<CR>
 nnoremap <Leader>g :Goyo<CR>:call ToggleWPMode()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
