@@ -52,9 +52,41 @@ bindkey '^N' history-search-forward
 # Customize to your needs...
 export PATH=/usr/local/bin:$HOME/anaconda/bin:$HOME/envs/py2/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$HOME/node_modules/less/bin:$PATH
 
+# determines what type of archive you have (based on fiie extension) and
+# executes the correct incantation to unarchive it.
+
+# determines what type of archive you have (based on fiie extension) and
+# executes the correct incantation to unarchive it.
+
+function extract () {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2)  tar -jxvf $1                       ;;
+            *.tar.gz)   tar -zxvf $1                       ;;
+            *.bz2)      bunzip2 $1                         ;;
+            *.dmg)      hdiuti1 mount $1                   ;;
+            *.gz)       gunzip $1                          ;;
+            *.tar)      tar -xvf $1                        ;;
+            *.tbz2)     tar -jxvf $1                       ;;
+            *.tgz)      tar -zxvf $1                       ;;
+            *.zip)      unzip $1                           ;;
+            *.ZIP)      unzip $1                           ;;
+            *.pax)      cat $1 | pax -r                    ;;
+            *.pax.Z)    uncompress $1 --stdout | pax -r    ;;
+            *.Z)        uncompress $1                      ;;
+            *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+
 alias v='f -e vim'; # quick opening files with vim
-export EDITOR='vim'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+export EDITOR="subl -w";
+alias edit="subl -w";
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim';
 alias ..='cd ..'; 
 alias ...='cd ../../'; 
 alias ....='cd ../../../'; 

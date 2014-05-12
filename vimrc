@@ -23,6 +23,8 @@ Bundle 'beloglazov/vim-online-thesaurus'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'davidbeckingsale/writegood.vim'
+Bundle 'tommcdo/vim-exchange'
+Bundle 'tpope/vim-surround'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -49,7 +51,7 @@ set relativenumber
 " Wrap long lines
 set wrap
 
-" Do not show invisible characters
+" Show invisible characters
 set list
 set listchars=tab:▸\ ,eol:¬
 
@@ -234,7 +236,8 @@ nmap <leader>m :!open -a Marked.app "%"<CR><CR>
 
 " WordProcessor Mode / Goyo
 let g:goyo_width=70
-
+let g:goyo_margin_top=0
+let g:goyo_margin_bottom=0
 let g:wp_mode_is_on = 0
 
 function! ToggleWPMode()
