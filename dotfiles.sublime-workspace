@@ -1,0 +1,708 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"mill",
+				"millisecondsPerDay"
+			],
+			[
+				"start",
+				"startMilli"
+			],
+			[
+				"articl",
+				"articleList"
+			],
+			[
+				"Z",
+				"ZSH_THEME"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 51.0,
+		"selected_items":
+		[
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"marked",
+				"Marked"
+			],
+			[
+				"shell",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"tex",
+				"Set Syntax: TeX"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"mul",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"readme",
+				"ReadmePlease"
+			],
+			[
+				"pack",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"table",
+				"Table Editor: Set table syntax 'MultiMarkdown' for current view"
+			],
+			[
+				"read",
+				"ReadmePlease"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"upg",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"xm",
+				"Set Syntax: XML"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"multi",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"open ip",
+				"Open IPython Notebook"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 552.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/walton/dotfiles"
+	],
+	"file_history":
+	[
+		"/Users/walton/dotfiles/zshrc",
+		"/Users/walton/dotfiles/vimrc",
+		"/Users/walton/dotfiles/slate",
+		"/Users/walton/Desktop/test.md",
+		"/tmp/bg38Ob",
+		"/Users/walton/Desktop/atf-3-paper.json",
+		"/Users/walton/Dropbox/OSN Transcriptome/Ors_Grs_Irs.md",
+		"/Users/walton/Dropbox/OSN Transcriptome/Ors_Grs_Irs.txt",
+		"/tmp/gnzMlW",
+		"/Users/walton/nb/content/pages/journal-club.md",
+		"/Users/walton/nb/content/pages/members.md",
+		"/Users/walton/nb/content/pages/notebook.md",
+		"/Users/walton/nb/content/pages/about.md",
+		"/Volumes/Church/2014-05-11 NewBelieversTraining.md",
+		"/tmp/Zs3cdT",
+		"/tmp/YIDK1G",
+		"/Applications/Skimmer.app/Contents/Resources/Scripts/buildFilePath.py",
+		"/Users/walton/Library/Application Support/Alfred 2/Alfred.alfredpreferences/workflows/user.workflow.F6E29DCB-FFB7-4F8D-AB7F-8EB23C22238C/pdf2doi.py",
+		"/Users/walton/Dropbox/2014-04-15 T-type channel.md",
+		"/Users/walton/Documents/BibDesk/Archived.bib",
+		"/Users/walton/Library/Application Support/BibDesk/Templates/citeServiceTemplate.txt",
+		"/Users/walton/Library/Application Support/Alfred 2/Alfred.alfredpreferences/workflows/user.workflow.AA6DE387-66D0-48A7-A56F-D2F3810505B8/search.php",
+		"/Users/walton/Library/Application Support/Alfred 2/Alfred.alfredpreferences/workflows/user.workflow.AA6DE387-66D0-48A7-A56F-D2F3810505B8/extension_utils.php",
+		"/Users/walton/Library/Application Support/BibDesk/Templates/VP5 notes page.txt",
+		"/Users/walton/Downloads/journal.pbio.1001745.pdf.txt",
+		"/Users/walton/wiki/ziemann2009dy.txt",
+		"/Users/walton/wiki/.git/COMMIT_EDITMSG",
+		"/Users/walton/Library/Application Support/BibDesk/Templates/MMD Cite Key.txt",
+		"/private/var/folders/7_/hh4pn96d2zgf1cbjxjg24yr40000gn/T/com.soulmen.ulysses3/e45d83038de44e65b91f7c925373d10d/e0735671f4a7464bbaaa53799302c2ac/RichText/Swiss Tony V1.ulss",
+		"/Users/walton/Library/Containers/com.foldingtext.FoldingText/Data/Library/Application Support/FoldingText/Plug-Ins/paste table of shortcut keys.ftplugin/main.js",
+		"/Users/walton/Library/Containers/com.foldingtext.FoldingText/Data/Library/Application Support/FoldingText/Plug-Ins/reminder tools.ftplugin/main.js",
+		"/Users/walton/scripts/ASpikeConvert.py",
+		"/Users/walton/Library/Application Support/Alfred 2/Alfred.alfredpreferences/workflows/user.workflow.8E5A13AA-AE80-4E54-B4BD-B17E2A334EDD/search.php",
+		"/Users/walton/Library/Application Support/Alfred 2/Alfred.alfredpreferences/workflows/user.workflow.8E5A13AA-AE80-4E54-B4BD-B17E2A334EDD/extension_utils.php",
+		"/Users/walton/Library/Application Support/BibDesk/Templates/LfBN Email.txt",
+		"/Users/walton/Library/Application Support/BibDesk/Templates/LfBN Compact.txt",
+		"/Users/walton/Library/Application Support/BibDesk/Templates/LfBN Extended.txt",
+		"/Users/walton/Library/Application Support/BibDesk/Templates/LfBN Publications.txt",
+		"/tmp/hrRvvD",
+		"/Users/walton/Desktop/Summary of article 522.md",
+		"/Users/walton/Downloads/text_snippet.txt",
+		"/Users/walton/Library/Application Support/Alfred 2/Alfred.alfredpreferences/workflows/user.workflow.F6E29DCB-FFB7-4F8D-AB7F-8EB23C22238C/crossref.py",
+		"/Users/walton/Library/Application Support/BibDesk/template.txt",
+		"/tmp/EAtIUE",
+		"/tmp/hkDChU",
+		"/tmp/CUGS0V",
+		"/Users/walton/Desktop/shopping",
+		"/tmp/oBgUMA",
+		"/tmp/SxllI5",
+		"/tmp/LWHofk",
+		"/tmp/C3C5e6",
+		"/Users/walton/Desktop/3-19 The wedding banquet of the lamb and the rider on the white horse.txt",
+		"/Users/walton/Desktop/3-21 The new heaven and new earth and the holy city.txt",
+		"/Users/walton/Desktop/3-16 Seven bowls of wrath and those onto whom the wrath is poured.txt",
+		"/Users/walton/Desktop/3-17 The prostitute and the wine of adultery.txt",
+		"/Users/walton/Desktop/3-22 The tree of life and Jesus' messenger.txt",
+		"/Users/walton/Desktop/3-14 The 144,000 first fruits at Mt. Zion.txt",
+		"/Users/walton/Desktop/3-18 Babylon's goods and marriage with demons.txt",
+		"/Users/walton/Library/Caches/Cleanup At Startup/Transmit/788F5473-586C-49CA-B8EE-E071E668D6D5/README.md",
+		"/tmp/BjobBp",
+		"/tmp/76h2MW",
+		"/Users/walton/Desktop/montecarlo.html",
+		"/tmp/epa1g3",
+		"/Users/walton/Desktop/3-13 The chosen people who received the mark of the beast and worshiped it.txt",
+		"/Users/walton/Desktop/3-11 The death of the two witnesses and the seventh trumpet.txt",
+		"/Users/walton/Desktop/3-10 The book of revelation from heaven.txt",
+		"/tmp/8xuBBb",
+		"/Users/walton/Library/Containers/com.unsignedinteger.Deckset/Data/Library/Application Support/com.unsignedinteger.Deckset/example/10 Deckset Basics/Deckset basics.md",
+		"/Users/walton/Desktop/3-09 The locusts from the abyss and the angels who sinned.txt",
+		"/Users/walton/Desktop/3-08 The last seal and the seven trumpets.txt",
+		"/Users/walton/Library/Containers/com.unsignedinteger.Deckset/Data/Library/Application Support/com.unsignedinteger.Deckset/example/30 Big text/Big text.md",
+		"/Users/walton/Library/Containers/com.unsignedinteger.Deckset/Data/Library/Application Support/com.unsignedinteger.Deckset/example/20 Working with images/Working with images.md",
+		"/Users/walton/Desktop/3-05 The book sealed with seven seals.txt",
+		"/tmp/qZOz0H",
+		"/tmp/2OVMlY",
+		"/tmp/i02ihn",
+		"/tmp/skpqNg",
+		"/tmp/T0GwBw",
+		"/tmp/Ct7J8O",
+		"/tmp/YUITAg",
+		"/tmp/IyoPup",
+		"/Users/walton/Dropbox/Notes/2014-03-28 Eunjin Lab Meeting.txt",
+		"/Users/walton/Dropbox/LfBNShare/Down-regulated.txt",
+		"/Users/walton/nb/svbhack/static/css/style.css",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/tmp/R3fY9B",
+		"/tmp/GESTB6",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/Table Editor/README.md",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/README.md",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/walton/Desktop/test",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/SublimeWritingStyle/SublimeWritingStyle.sublime-settings",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/User/SublimeWritingStyle.sublime-settings",
+		"/tmp/TtVIfp",
+		"/tmp/Wr8ygC",
+		"/tmp/nXWBYP",
+		"/Users/walton/Library/Application Support/Sublime Text 3/Packages/PlainTasks/messages/Tutorial.todo",
+		"/Users/walton/Library/Application Support/TaskPaper/Themes/0_AvenirCan.taskpapertheme",
+		"/Users/walton/Library/Containers/com.foldingtext.TaskPaper/Data/Library/Application Support/TaskPaper/Plug-Ins/start_tag_style.tpplugin/main.js",
+		"/Users/walton/Library/Containers/com.foldingtext.TaskPaper/Data/Library/Application Support/TaskPaper/Plug-Ins/due_tag_style.tpplugin/main.js",
+		"/Users/walton/Desktop/drosophila_papers.csv",
+		"/Users/walton/Library/Caches/Cleanup At Startup/Transmit/ADEE60D8-D117-4944-B640-72FDBE9D1423/BibleGatewayAfter.png",
+		"/Users/walton/Sites/han.zip",
+		"/Users/walton/Downloads/10.1371%2Fjournal.pbio.1001745.bib",
+		"/Users/walton/Desktop/new",
+		"/Users/walton/Desktop/old",
+		"/Users/walton/nb/svbhack/static/css/style.less",
+		"/Users/walton/nb/svbhack/templates/base.html",
+		"/Users/walton/nbdev/svbhack/templates/index.html",
+		"/Users/walton/nbdev/svbhack/templates/tags.html",
+		"/Users/walton/nbdev/svbhack/templates/tag.html",
+		"/Users/walton/nbdev/pelicanconf.py",
+		"/Users/walton/nbdev/svbhack/templates/article.html",
+		"/Users/walton/nbdev/svbhack/templates/base.html",
+		"/Users/walton/nbdev/svbhack/static/css/style.less",
+		"/Users/walton/nbdev/svbhack/static/css/bigfoot-number.css",
+		"/Users/walton/nbdev/svbhack/templates/categories.html",
+		"/Users/walton/nbdev/svbhack/templates/category.html",
+		"/Users/walton/nbdev/svbhack/templates/page.html",
+		"/Users/walton/nbdev/svbhack/templates/archives.html",
+		"/Users/walton/nbdev/pel-plugins/ipythonnb/ipythonnb.py",
+		"/Users/walton/nbdev/content/notebook/2014-02-10 CAFE.ipynb",
+		"/Users/walton/nbdev/svbhack/static/css/responsive-nav.css",
+		"/Users/walton/nbdev/svbhack/static/css/style.css",
+		"/Users/walton/nbdev/svbhack/Makefile",
+		"/Users/walton/nbdev/svbhack/static/css/nav-style.css"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"(?<!\\\\)(\".*?\")",
+			"(?<!\\\\|\\{)(\".*?\")",
+			"(^Abstract.*)(?<!\\\\|\\{)(\".*?\")",
+			"(?<!\\\\|\\{)\".*?\"",
+			"(?<!\\\\)\".*?\"",
+			"\".*?\"",
+			"\\t(Uri \\= \\{\\\\url\\{papers2\\:\\/\\/publication\\/)(.*)\\}\\},\\n",
+			"(Uri \\= \\{\\\\url\\{papers2\\:\\/\\/publication\\/)(.*)\\}\\},\\n",
+			"(Uri \\= \\{\\\\url\\{papers2\\:\\/\\/publication\\/)(.*)\\}\\},",
+			"papers2",
+			"(Uri \\= \\{\\\\url\\{papers2\\:\\/\\/publication\\/doi\\/)(.*)\\}\\},",
+			"doi = ",
+			"(Uri \\= \\{\\\\url\\{papers2\\:\\/\\/publication\\/doi\\/)(.*)\\}\\},",
+			"DOI =",
+			"copy",
+			"Copy",
+			"\n ",
+			" ? ",
+			"~",
+			"beween",
+			"between",
+			"FBgn0041195",
+			"PKD2",
+			"CG6504",
+			"excited",
+			"show",
+			"boobies",
+			"ipsa",
+			"rem",
+			"unde",
+			"dolore",
+			"voluptatem",
+			"numquam",
+			"the",
+			"The",
+			"like",
+			"Wow",
+			"ctrl+right",
+			",",
+			"\\n",
+			",,",
+			" ",
+			"  ",
+			"(     |    )",
+			"\\. ",
+			"media-body",
+			"unstyled",
+			"ul",
+			"article",
+			"media-body",
+			"h1",
+			"border-bottom",
+			"OUTPUT",
+			"wrapper",
+			"Here",
+			"}",
+			"_text",
+			"text",
+			"article_text",
+			"article.text",
+			"article_title",
+			"100%",
+			"div",
+			"border-right",
+			"100%",
+			"\\vexpo",
+			"h2",
+			"toggle",
+			".nav",
+			"border-right",
+			"200",
+			"192",
+			"shadow",
+			"shadob",
+			" ",
+			"～",
+			"(^(?<! )[A-Za-z12]+.*)",
+			"(\\d)\\s+([A-Z])",
+			" ",
+			" ",
+			"～",
+			"Ref.",
+			"(-)(\\d)(\\n)",
+			"\\n\\n",
+			"June",
+			"May",
+			"April",
+			"March",
+			".*\\n\\w+, (\\w+) (\\d+), (\\d{4}).*\\n.*",
+			" ",
+			"start",
+			"@diff.+",
+			"Wk3",
+			"Wk1",
+			" @diffstart\\(\\d+\\)",
+			" @diffdue\\(\\d+\\)",
+			"@diffdue\\(\\d+\\)",
+			"\\\\hypertarget\\{\\d\\D+?\\}\\{\\}",
+			"\\\\hypertarget\\{\\d\\D+?\\}",
+			"\\\\hyperlink\\{\\d\\D+?\\}",
+			"\\\\hyperlink\\{\\d\\D?\\}",
+			"expandtab",
+			"auto",
+			"\\n",
+			"qqq",
+			"\\n",
+			"\\n\\n",
+			"cursor",
+			"autocd",
+			"setopt",
+			"url",
+			"cite",
+			"patho",
+			"(.*)\\n",
+			"matches",
+			"cite",
+			"ctrl+shift+s",
+			"thus",
+			"(.*)\\n",
+			"\\n",
+			"TrissinR",
+			"(.*)\\n",
+			"--",
+			"(\\:\\*\\* Rv \\d+)\\s+",
+			"(\\:\\*\\* Rv \\d+)",
+			"(:**) ",
+			"(Lesson \\d+) ",
+			"(.*)\\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"{$1}",
+			"",
+			"Doi = {$2},",
+			"\n",
+			"\\n",
+			"-",
+			"\\t",
+			",",
+			"",
+			".\\n",
+			" ",
+			"-",
+			"**\\1** - ",
+			"**\\1**",
+			"\\1\\n\\n\\2",
+			" ",
+			"-",
+			"reference",
+			"\\10\\2\\3",
+			"\\n",
+			"06",
+			"05",
+			"04",
+			"03",
+			"\\3-\\1-\\2",
+			"\\3-\\2-\\1",
+			" ",
+			"due",
+			"",
+			"Wk1",
+			"Wk4",
+			"Wk3",
+			"Wk2",
+			"",
+			"\\\\textbf",
+			"\\textbf",
+			" ",
+			"\\n\\n",
+			"",
+			"qqq",
+			"\"\\1\", ",
+			"—",
+			"\\1 - ",
+			"**\\1:** ",
+			"**\\1**: ",
+			"\"\\1\", ",
+			"\\1, ",
+			"\"\\1\", ",
+			", ",
+			"",
+			"\"$1\", ",
+			"\\n",
+			"$1",
+			"fa fa-",
+			"",
+			"'Col1'",
+			"'Col2'",
+			"'Col1'",
+			"'Col2'",
+			"'Col1'",
+			"\\t",
+			"\\2\\3",
+			"\\1",
+			"\\2\\3",
+			"\\3\\4",
+			"\\3\\4\\5\\6\\7\\8\\9\\10",
+			"\\3\\4\\5\\6\\7\\8\\9",
+			"\\t",
+			"\\n",
+			"",
+			"\\1",
+			"",
+			"C",
+			"P",
+			"B",
+			"V",
+			"L",
+			"Y",
+			"S",
+			"F",
+			"M",
+			"A",
+			"D",
+			"I",
+			"N",
+			"G",
+			"U",
+			"O",
+			"R",
+			"S",
+			"R",
+			"\"\\1\":",
+			"\"\\1\"",
+			", ",
+			": ",
+			"\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 124.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "dotfiles.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"zsh",
+				"zshrc"
+			],
+			[
+				"vim",
+				"vimrc"
+			],
+			[
+				"sla",
+				"slate"
+			],
+			[
+				"tes",
+				"~/Desktop/test.md"
+			],
+			[
+				"table",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+			],
+			[
+				"",
+				"Date: 2013-09-17"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

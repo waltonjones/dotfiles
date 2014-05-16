@@ -79,6 +79,9 @@ let mapleader = ","
 " Save document when window loses focus
 au FocusLost * :wa
 
+" Enable filetype plugins
+filetype plugin on
+
 " Stop opening help on accident when going for escape
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>

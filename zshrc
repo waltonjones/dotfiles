@@ -50,7 +50,7 @@ bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 
 # Customize to your needs...
-export PATH=/usr/local/bin:$HOME/anaconda/bin:$HOME/envs/py2/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$HOME/node_modules/less/bin:$PATH
+export PATH=/usr/local/bin:$HOME/anaconda/bin:$HOME/envs/py2/bin:/usr/local/sbin:/usr/bin:$HOME/bin:/usr/sbin:/sbin:/opt/X11/bin:$HOME/bin:$HOME/scripts:$HOME/node_modules/less/bin:/usr/local/share/$PATH
 
 # determines what type of archive you have (based on fiie extension) and
 # executes the correct incantation to unarchive it.
@@ -86,6 +86,7 @@ export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
 alias v='f -e vim'; # quick opening files with vim
 export EDITOR="subl -w";
 alias edit="subl -w";
+alias t=trash;
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim';
 alias ..='cd ..'; 
 alias ...='cd ../../'; 
