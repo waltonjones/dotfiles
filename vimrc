@@ -20,12 +20,32 @@ Bundle 'https://github.com/altercation/vim-colors-solarized.git'
 Bundle 'https://github.com/junegunn/goyo.vim.git'
 Bundle 'https://github.com/tpope/vim-markdown.git'
 Bundle 'beloglazov/vim-online-thesaurus'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'davidbeckingsale/writegood.vim'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-surround'
+Bundle 'kien/ctrlp.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" ctlp.vim settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" key mapping to invoke ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" Settings for working directory
+let g:ctrlp_working_path_mode = 0
+
+" Ignore files and directories
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" Use find instead of Vim's globpath()
+let g:ctrlp_user_command = 'find %s -type f' 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 
 
