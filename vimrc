@@ -100,7 +100,7 @@ let mapleader = ","
 au FocusLost * :wa
 
 " Enable filetype plugins
-filetype plugin on
+filetype plugin indent on
 
 " Stop opening help on accident when going for escape
 inoremap <F1> <ESC>
