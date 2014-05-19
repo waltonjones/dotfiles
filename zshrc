@@ -55,9 +55,6 @@ export PATH=/usr/local/bin:$HOME/anaconda/bin:$HOME/envs/py2/bin:/usr/local/sbin
 # determines what type of archive you have (based on fiie extension) and
 # executes the correct incantation to unarchive it.
 
-# determines what type of archive you have (based on fiie extension) and
-# executes the correct incantation to unarchive it.
-
 function extract () {
     if [ -f $1 ]; then
         case $1 in

@@ -334,5 +334,5 @@ syntax enable
 call togglebg#map("<F5>")
 
 " Set the GUI font for MacVim
-:set guifont=Inconsolata-dz:h15
+:set guifont=Inconsolata-dz\ for\ Powerline:h15
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
