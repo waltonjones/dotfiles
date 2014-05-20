@@ -7,9 +7,6 @@ filetype off
 " Security issue
 set modelines=0
 
-
-
-
 " Bundle management
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/vundle/
