@@ -22,6 +22,11 @@ Bundle 'davidbeckingsale/writegood.vim'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'bling/vim-airline'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'sjl/gundo.vim'
+Bundle 'airblade/vim-gitgutter'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -39,7 +44,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Use find instead of Vim's globpath()
-let g:ctrlp_user_command = 'find %s -type f' 
+let g:ctrlp_user_command = 'find %s -type f'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -126,6 +131,13 @@ set showcmd
 
 
 
+" Airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fixes the weird delay when exiting Insert mode
+set ttimeoutlen=50
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 
 " Search
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,7 +157,7 @@ set gdefault
 " Start searching as soon as text is typed
 set incsearch
 
-" Jump back to matching bracket briefly when closing one is inserted. 
+" Jump back to matching bracket briefly when closing one is inserted.
 set showmatch
 
 " Auto-scrolls so at least 3 lines are visible around each search result
@@ -158,9 +170,12 @@ set hlsearch
 nnoremap <leader><space> :noh<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Gundo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F1> :GundoToggle<CR>
 
 
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Tabs/Indenting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -330,6 +345,7 @@ syntax enable
 " Use F5 to toggle between light and dark solarized versions
 call togglebg#map("<F5>")
 
-" Set the GUI font for MacVim
-:set guifont=Inconsolata-dz\ for\ Powerline:h15
+set guifont=Inconsolata-dz\ for\ Powerline:h15
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+
