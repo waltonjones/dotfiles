@@ -27,6 +27,12 @@ Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'sjl/gundo.vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'SirVer/ultisnips'
+Bundle 'vimoutliner/vimoutliner'
+Bundle 'godlygeek/tabular'
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'scrooloose/syntastic'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -95,9 +101,6 @@ set autoread
 " Make backspace work
 set backspace=indent,eol,start
 
-" Map leader key (default was "\")
-let mapleader = ","
-
 " Save document when window loses focus
 au FocusLost * :wa
 
@@ -134,10 +137,27 @@ set showcmd
 " Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fixes the weird delay when exiting Insert mode
-set ttimeoutlen=50
+set timeoutlen=500
+set ttimeoutlen=10
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
+" Tabular
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Search
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -304,9 +324,6 @@ nnoremap <Leader>g :Goyo<CR>:call ToggleWPMode()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Open vimrc up in a split window for on-the-fly changes
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-
-" Double j's in insert mode returns to normal mode
-inoremap jj <ESC>
 
 " Re-hardwrap paragraphs with leader-q
 nnoremap <leader>q gqip
