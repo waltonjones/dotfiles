@@ -282,14 +282,14 @@ function! ToggleWPMode()
         set nospell
         set formatprg=""
         let g:wp_mode_is_on = 0
-        silent !WritegoodDisable
+        WritegoodToggle
     else
         set formatoptions=n1
         set linebreak nolist
-        set spell spelllang=en_us
+        set spell spelllang=en
         set formatprg=par
         let g:wp_mode_is_on = 1
-        WritegoodEnable
+        WritegoodToggle
     endif
 endfunction
 nnoremap <Leader>wp :call ToggleWPMode()<CR>
