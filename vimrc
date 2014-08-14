@@ -7,32 +7,46 @@ filetype off
 " Security issue
 set modelines=0
 
-" Bundle management
+" Plugin management
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'https://github.com/altercation/vim-colors-solarized.git'
-Bundle 'https://github.com/junegunn/goyo.vim.git'
-Bundle 'https://github.com/tpope/vim-markdown.git'
-Bundle 'beloglazov/vim-online-thesaurus'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'davidbeckingsale/writegood.vim'
-Bundle 'tommcdo/vim-exchange'
-Bundle 'tpope/vim-surround'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'bling/vim-airline'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'sjl/gundo.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'SirVer/ultisnips'
-Bundle 'vimoutliner/vimoutliner'
-Bundle 'godlygeek/tabular'
-"Bundle 'Valloric/YouCompleteMe'
-"Bundle 'scrooloose/syntastic'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'https://github.com/altercation/vim-colors-solarized.git'
+Plugin 'https://github.com/junegunn/goyo.vim.git'
+Plugin 'https://github.com/tpope/vim-markdown.git'
+Plugin 'beloglazov/vim-online-thesaurus'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'davidbeckingsale/writegood.vim'
+Plugin 'tommcdo/vim-exchange'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'bling/vim-airline'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'sjl/gundo.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-expand-region'
+Plugin 'SirVer/ultisnips'
+Plugin 'vimoutliner/vimoutliner'
+Plugin 'godlygeek/tabular'
+Plugin 'sheerun/vim-polyglot'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'scrooloose/syntastic'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" see :h vundle for more details or wiki for FAQ
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -49,12 +63,14 @@ let g:ctrlp_working_path_mode = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-" Use find instead of Vim's globpath()
-let g:ctrlp_user_command = 'find %s -type f'
+" Use find instead of Vim's globpath() and speed up for git projects
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
+
+" Open files with Leader o
+nnoremap <Leader>o :CtrlP<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 
 
 
@@ -62,6 +78,9 @@ let g:ctrlp_user_command = 'find %s -type f'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable welcome message
 set shortmess+=I
+
+" Remap leader
+let mapleader = "\<Space>"
 
 " Set default encoding
 set encoding=utf-8
@@ -73,7 +92,8 @@ set wildmode=list:longest,full
 " Create undofiles so undo works across sessions
 set undofile
 
-" Show relative line numbers
+" Show relative line numbers everywhere except cursor line
+set number
 set relativenumber
 
 " Wrap long lines
@@ -111,6 +131,7 @@ filetype plugin indent on
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -193,7 +214,6 @@ nnoremap <leader><space> :noh<cr>
 " Gundo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F1> :GundoToggle<CR>
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -285,9 +305,8 @@ set clipboard=unnamed
 
 " Settings for writing prose/markdown
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Open markdown in marked
-imap <leader>m <ESC>:!open -a Marked.app "%"<CR><CR>
-nmap <leader>m :!open -a Marked.app "%"<CR><CR>
+" Open current file in Marked 2
+nmap <leader>m :!open -a Marked\ 2.app "%"<CR><CR>
 
 " WordProcessor Mode / Goyo
 let g:goyo_width=70
@@ -316,14 +335,19 @@ nnoremap <Leader>wp :call ToggleWPMode()<CR>
 nnoremap <Leader>g :Goyo<CR>:call ToggleWPMode()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-
-
+" Remap usage of vim-expand-region
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Crazy combos to make things easier
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Open vimrc up in a split window for on-the-fly changes
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>ev :tabe $MYVIMRC<CR>
+
+" Save file with leader s
+nnoremap <Leader>s :w<CR>
 
 " Re-hardwrap paragraphs with leader-q
 nnoremap <leader>q gqip
@@ -339,6 +363,15 @@ nnoremap <C-l> <C-w>l
 
 " Toggle comments with Nerdcommenter from normal mode
 map <leader>/ <plug>NERDCommenterToggle<CR>
+
+" Automatically move to end of the pasted text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" Quickly select text you just pasted
+noremap gV `[v`]
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 

@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="walton"
 
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Example aliases
@@ -38,7 +38,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git brew osx pip tmux)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -78,16 +78,35 @@ function extract () {
     fi
 }
 
+# Function to allow ^Z to bounce back and forth from Vim
+fancy-ctrl-z () {
+    if [[ $#BUFFER -eq 0 ]]; then
+        BUFFER="fg"
+        zle accept-line
+    else
+        zle push-input
+        zle clear-screen
+    fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
+
+
 export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+
+function marked {
+    open -a Marked\ 2.app $@
+}
 
 alias v='f -e vim'; # quick opening files with vim
 export EDITOR="subl -w";
 alias edit="subl -w";
 alias t=trash;
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim';
-alias ..='cd ..'; 
-alias ...='cd ../../'; 
-alias ....='cd ../../../'; 
+alias ..='cd ..';
+alias ...='cd ../../';
+alias ....='cd ../../../';
 alias .....='cd ../../../../';
 autoload -U compinit && compinit;
 eval "$(fasd --init posix-alias zsh-hook)"
