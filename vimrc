@@ -33,7 +33,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'godlygeek/tabular'
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
