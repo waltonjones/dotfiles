@@ -5,7 +5,7 @@ colorscheme solarized-light
 set guioptions=Crs
 
 " Show the tab bar only when there are multiple tabs
-set showtabline=never
+set showtabline=multitab
 
 " Set hint key labels to only homerow keys
 set hintkeys="fjdksla;gh"
