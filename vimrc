@@ -7,6 +7,11 @@ filetype off
 " Security issue
 set modelines=0
 
+" Remap leader
+nnoremap <space> <NOP>
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+
 " Plugin management
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -59,13 +64,17 @@ let g:ctrlp_cmd = 'CtrlP'
 " Settings for working directory
 let g:ctrlp_working_path_mode = 0
 
-" Ignore files and directories
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" Order matching top to bottom
+let g:ctrlp_match_window = 'bottom,order:ttb'
 
-" Use find instead of Vim's globpath() and speed up for git projects
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let g:ctrlp_use_caching = 0
+" Use silver searcher instead of Vim's globpath() (ignores are set in
+" ~/.agignore
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+endif
+
+" Always open files in new buffers
+let g:ctrlp_switch_buffer = 0
 
 " Open files with Leader o
 nnoremap <Leader>o :CtrlP<CR>
@@ -76,14 +85,14 @@ nnoremap <Leader>o :CtrlP<CR>
 
 " Miscellaneous
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Disable welcome message
+"Disable welcome message
 set shortmess+=I
-
-" Remap leader
-let mapleader = "\<Space>"
 
 " Set default encoding
 set encoding=utf-8
+
+" Enable extended % matching
+runtime macros/matchit.vim
 
 " Adjusting the menu shown for command auto-completion
 set wildmenu
@@ -208,7 +217,7 @@ set scrolloff=3
 set hlsearch
 
 " Can be annoying, so leader+space will clear it.
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><CR> :noh<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Gundo
@@ -344,7 +353,8 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " Crazy combos to make things easier
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Open vimrc up in a split window for on-the-fly changes
-nnoremap <leader>ev :tabe $MYVIMRC<CR>
+nnoremap <silent> <leader>ev :tabe $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Save file with leader s
 nnoremap <Leader>s :w<CR>
@@ -392,10 +402,9 @@ set background=light
 "Turn on syntax highlighting
 syntax enable
 
-" Use F5 to toggle between light and dark solarized versions
-call togglebg#map("<F5>")
+" Use F6 to toggle between light and dark solarized versions
+call togglebg#map("<F6>")
 
 set guifont=Inconsolata-dz\ for\ Powerline:h15
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-

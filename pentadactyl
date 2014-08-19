@@ -1,0 +1,11 @@
+" Enable the solarized colorscheme
+colorscheme solarized-light
+
+" Show command line outside of status, right scroll bars, enable status line
+set guioptions=Crs
+
+" Show the tab bar only when there are multiple tabs
+set showtabline=never
+
+" Set hint key labels to only homerow keys
+set hintkeys="fjdksla;gh"
